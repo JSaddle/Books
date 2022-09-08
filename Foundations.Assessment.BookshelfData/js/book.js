@@ -3,11 +3,13 @@ function Book(author, language, subject, title) {
   this.language = language;
   this.subject = subject;
   this.title = title;
-//////////hello
+  // Define the properties of each book: author, language, subject, title.
+
   /* CHANGE RENDER! THIS IS A TEMPLATE */
   this.render = () => {
     const li = document.createElement('li');
     li.textContent = this.title;
     return li; 
   }
+  // Create list item representing a Book and include the title of the Book in the list item.
 };
