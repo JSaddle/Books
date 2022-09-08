@@ -5,7 +5,7 @@ function Book(author, language, subject, title) {
   this.title = title;
   // Define the properties of each book: author, language, subject, title.
 
-  /* CHANGE RENDER! THIS IS A TEMPLATE */
+  
   this.render = () => {
     const li = document.createElement('li');
     li.textContent = this.title;
