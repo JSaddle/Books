@@ -27,11 +27,20 @@ function Bookshelf(books = []) {
   };
 
   /* CHANGE RENDER! THIS IS A TEMPLATE */
-  this.render = function () {
-    const ul = document.createElement("ul");
-    for (const book of this.books) {
-      ul.append(book.render());
-    }
-    return ul;
-  };
+  // this.render = function () {
+  //   const ul = document.createElement("ul");
+  //   for (const book of this.books) {
+  //     ul.append(book.render());
+  //   }
+  //   return ul;
+  // };
+  this.render = function (idx) {
+    const list = document.createElement("ul");
+    list.id = `shelf${idx}`;
+
+    const bookElements = this.books.map((b, i) => b.render(`${idx}:${i}`));
+    list.replaceChildren(...bookElements);
+    return list;
+
+  }
 }
