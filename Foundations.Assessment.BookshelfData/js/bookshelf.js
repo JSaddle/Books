@@ -30,7 +30,7 @@ function Bookshelf(books = []) {
   this.render = function (idx) {
     const list = document.createElement("ul");
     list.id = `shelf${idx}`;
-
+    // Create a list item with the id shelf${input} to our function.
     const bookElements = this.books.map((b, i) => b.render(`${idx}:${i}`));
     list.replaceChildren(...bookElements);
     return list;
