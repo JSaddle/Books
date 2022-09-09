@@ -21,13 +21,13 @@ srchBtn.addEventListener("click", Search);
 
 function Search() {
     const txtInp = txtSrch.value;
-    // const result = bookshelf.books.filter((element) =>
-    //   (String(element).toLowerCase().includes(txtInp))
-    //   );
-       // console.log(result);
-   // convert object to string
+    const result = bookshelf.books.filter((element) =>
+      (String(element).toLowerCase().includes(txtInp))
+      );
+       console.log(result);
+  //  convert object to string
     
-   
+///////////Below are different methods I attempted to make my search bar work. I'm able to make an array show up in the console but the search bar is evidently not functional. ////////////////////  
    
    
   //  const result = function(element){
@@ -44,18 +44,18 @@ function Search() {
     //log result variable to make sure filter working properly
     
 
-const result = bookshelf.books.filter(checkC);
+// const result = bookshelf.books.filter(checkC);
 
-function checkC(word){
-  if (String(word).toLowerCase().includes(txtInp)){
-    return true;
-  }
-  else {
-    return null;
-  }
-}
+// function checkC(word){
+//   if (String(word).toLowerCase().includes(txtInp)){
+//     return true;
+//   }
+//   else {
+//     return null;
+//   }
+// }
 
-console.log(result);
+// console.log(result);
 
 
 }

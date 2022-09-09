@@ -32,6 +32,7 @@ function Bookshelf(books = []) {
     list.id = `shelf${idx}`;
     // Create a list item with the id shelf${input} to our function.
     const bookElements = this.books.map((b, i) => b.render(`${idx}:${i}`));
+    // Create a new array that contains the elements within our books array.
     list.replaceChildren(...bookElements);
     return list;
 
